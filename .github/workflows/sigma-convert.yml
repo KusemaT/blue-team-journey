@@ -1,0 +1,43 @@
+name: Convert Sigma Rules to SPL and KQL
+
+on:
+  push:
+    paths:
+      - 'sigma-rules/*.yml'
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install sigma-cli
+        run: pip install sigma-cli
+
+      - name: Install Splunk backend
+        run: sigma plugin install splunk
+
+      - name: Install Microsoft 365 Defender backend
+        run: sigma plugin install microsoft365defender
+
+      - name: Convert Sigma rules to Splunk SPL
+        run: |
+          mkdir -p detection-rules/auto-converted
+          sigma convert -t splunk sigma-rules/ \
+            > detection-rules/auto-converted/converted-splunk.txt
+          echo "Splunk conversion complete"
+
+      - name: Convert Sigma rules to Microsoft Sentinel KQL
+        run: |
+          sigma convert -t microsoft365defender sigma-rules/ \
+            > detection-rules/auto-converted/converted-kql.txt
+          echo "KQL conversion complete"
+
+      - name: Commit converted rules
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Actions"
+          git add detection-rules/auto-converted/
+          git diff --staged --quiet || git commit -m "Auto-convert Sigma rules to SPL and KQL"
+          git push
