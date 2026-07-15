@@ -1,0 +1,31 @@
+title: Kerberoasting - RC4 Encrypted Service Ticket Request
+id: a1b2c3d4-e5f6-7890-abcd-ef1234567890
+status: experimental
+description: >
+  Detects Kerberoasting activity — a credential access technique where an attacker
+  requests Kerberos service tickets encrypted with the weaker RC4 algorithm (0x17)
+  rather than AES. Attackers prefer RC4 tickets because they are faster to crack
+  offline using tools like hashcat.
+references:
+  - https://attack.mitre.org/techniques/T1558/003/
+  - https://www.ired.team/offensive-security-experiments/active-directory-kerberos-abuse/t1208-kerberoasting
+author: Tadi Kusema
+date: 2026/06/01
+tags:
+  - attack.credential_access
+  - attack.t1558.003
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4769
+    TicketEncryptionType: '0x17'
+  filter_legitimate:
+    ServiceName|endswith:
+      - '$'
+condition: selection and not filter_legitimate
+falsepositives:
+  - Legacy applications that legitimately require RC4 Kerberos encryption
+  - Older Windows systems that do not support AES Kerberos
+level: high
