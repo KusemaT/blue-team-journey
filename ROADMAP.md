@@ -18,7 +18,7 @@
 ### Week 1 — Lab Setup + Security+ Study Begin
 
 #### Day 1 — Monday 1 June
-- [ ] Enrol on Professor Messer Security+ SY0-701 (free): go to professormesser.com → Study Materials → SY0-701 → create account
+- [x] Enrol on Professor Messer Security+ SY0-701 (free): go to professormesser.com → Study Materials → SY0-701 → create account
 - [ ] Watch 1.1 Security Controls: note 4 control types (Technical, Managerial, Operational, Physical) and 6 functions (Preventive, Detective, Corrective, Deterrent, Compensating, Directive)
 - [ ] Watch 1.2 Fundamental Security Concepts: note CIA Triad definitions and non-repudiation
 - [ ] Create Quizlet set "Security+ Domain 1": go to quizlet.com → Create → Generate with AI → type "Security+ control types and CIA Triad flashcards" → review and save
