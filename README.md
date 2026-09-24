@@ -55,7 +55,7 @@ blue-team-journey/
 
 | Cert | Status | Date |
 |------|--------|------|
-| CompTIA Security+ SY0-701 | ✅ Passed | Jun 2026 |
+| CompTIA Security+ SY0-701 | 🎯 Target | Jun 2026 |
 | BTL1 Blue Team Level 1 | 🎯 Target | Jul 2026 |
 | SC-200 Microsoft Security Operations | 🎯 Target | Aug 2026 |
 
