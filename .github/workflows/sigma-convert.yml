@@ -5,12 +5,15 @@ on:
     paths:
       - 'sigma-rules/*.yml'
 
+permissions:
+  contents: write
+
 jobs:
   convert:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install sigma-cli
         run: pip install sigma-cli

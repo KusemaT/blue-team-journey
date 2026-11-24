@@ -1,60 +1,66 @@
 # Blue Team Journey 🛡️
 
-**Tadiwanashe Kusema** | BSc Cyber Security, University of Derby | Aspiring Blue Team Analyst
+**Tadiwanashe Kusema** | BSc Cyber Security, University of Derby | Coventry, UK
 
-Hands-on blue team practice for UK SOC analyst roles: detection engineering, DFIR, and incident response, built in a home lab.
-No certifications held yet.
+Hands-on blue team practice for UK SOC analyst roles: detection engineering, incident response, and threat hunting, built in a home lab. This repo holds the detection rules, scripts, and write-ups behind that work.
+
+Items marked *planned* are not yet in the repo. Open to graduate SOC and detection roles in the UK, and open to relocation.
 
 ---
 
-## 🔧 Home Lab Stack
+## 🔧 Home Lab (target stack)
 
 | Component | Tool | Purpose |
 |-----------|------|---------|
-| Hypervisor | VirtualBox | Runs all VMs |
-| Attacker | Kali Linux | Attack simulation |
-| Target | Windows 10 + Sysmon | Endpoint telemetry |
-| SIEM 1 | Splunk Enterprise (free) | SPL detection rules |
+| Hypervisor | VirtualBox | Runs all VMs on an isolated network |
+| Attacker | Kali Linux | Controlled attack simulation |
+| Endpoint | Windows 10 or 11 + Sysmon | Endpoint telemetry |
+| SIEM 1 | Splunk Enterprise (free licence) | SPL detection rules |
 | SIEM 2 | Microsoft Sentinel (Azure) | KQL detection rules |
-| Network IDS | Security Onion + Zeek | Network visibility |
-| Memory forensics | Volatility3 | RAM analysis |
-| Disk forensics | KAPE + EZ Tools | Artefact collection |
 | AD lab | Windows Server + lab.local | Attack path simulation |
+| Network IDS | Security Onion + Zeek *(planned)* | Network visibility |
+| Memory forensics | Volatility3 *(planned)* | RAM analysis |
+| Disk forensics | KAPE + EZ Tools *(planned)* | Artefact collection |
 
 ---
 
 ## 📁 Repository Structure
+
+```
 blue-team-journey/
-├── detection-rules/       # SPL + KQL detection rules with ATT&CK mapping
-├── sigma-rules/           # Vendor-agnostic Sigma YAML rules
-├── scripts/               # Python + PowerShell SOC automation tools
-├── writeups/              # CTF writeups with ATT&CK + detection queries
-├── tickets/               # Mock incident tickets (ServiceNow + Jira format)
-├── reports/               # Professional forensic investigation reports
-├── docs/                  # Supporting documentation
-└── ad-lab/                # Active Directory lab notes and findings
+├── detection-rules/   # SPL + KQL detection rules with ATT&CK mapping
+├── sigma-rules/       # Vendor-agnostic Sigma YAML rules, converted by CI
+├── scripts/           # Python SOC tools (PowerShell planned)
+├── writeups/          # CTF write-ups (first one is a draft)
+├── tickets/           # Mock incident tickets for practice (templates)
+├── docs/              # Interview preparation notes
+├── reports/           # Forensic investigation reports (planned)
+├── ad-lab/            # Active Directory lab notes (planned)
+└── .github/workflows/ # CI pipeline that converts Sigma rules
+```
+
 ---
 
-## 🎯 Skills
+## 🎯 Skills Shown in This Repo
 
-**SIEM:** Splunk SPL · Microsoft Sentinel KQL · Detection rule authoring · Sigma CI/CD pipeline
+**Detection:** Splunk SPL · Microsoft Sentinel KQL · Sigma rule format · MITRE ATT&CK mapping
 
-**Windows Event IDs:** 4624 · 4625 · 4634 · 4740 · 4720 · 4732 · 7045 · 7036
+**Windows event IDs used:** 4624 · 4625 · 4720 · 4732 · 4740 · 4769 · 7045 · Sysmon 1 and 10
 
-**Scripting:** Python (IOC enrichment, SOAR automation, Jinja2 reports) · PowerShell (log queries, forensic triage)
+**Scripting:** Python (threat-intelligence API enrichment, HTML triage reports)
 
-**DFIR:** Volatility3 · KAPE · PECmd · LECmd · RECmd · Autopsy
+**Frameworks:** MITRE ATT&CK · UK GDPR · Cyber Essentials (study)
 
-**Frameworks:** MITRE ATT&CK · PICERL · Cyber Kill Chain · UK GDPR · Cyber Essentials
+**Learning in progress:** Microsoft Entra ID and Sentinel identity detections · Defender for Endpoint · AI-assisted alert triage (planned)
 
-**EDR awareness:** CrowdStrike Falcon Fundamentals (CrowdStrike University)
+**EDR awareness:** CrowdStrike Falcon Fundamentals (CrowdStrike University, free course)
 
 ---
 
 ## 📊 Plan and Progress
 
 | Month | Focus | Output |
-|-------|-------|-----------|
-| Month 1 | Lab build and detection rules | Lab running; first detection rules and one CTF writeup in progress |
-| Month 2 | DFIR depth | Further CTF writeups and forensic reports (planned) |
+|-------|-------|--------|
+| Month 1 | Lab build and detection rules | Lab running; first detection rule and CTF write-up in progress |
+| Month 2 | Identity detections and DFIR depth | Further detections and write-ups (planned) |
 | Month 3 | Capstone project and job search | Capstone project (planned) |

@@ -20,15 +20,15 @@ my Python enrichment script. I checked whether the target account was privileged
 
 **Result:** In my test case, I detected that 6 failed logons for the jsmith account
 were followed by a successful logon from the same IP — indicating brute force success.
-In the lab I classified this as a True Positive and documented it in a Jira-format mock incident
-ticket with the ATT&CK technique (T1110.001) and immediate response actions.
+In the lab I classified this as a True Positive and documented it in a mock incident
+ticket with the ATT&CK technique (T1110) and immediate response actions.
 
 ---
 
 ## Q2: "How do you prioritise multiple alerts firing simultaneously?"
 
-**Situation:** In my home lab Splunk dashboard, I monitor detection rules covering
-8 different Windows Event IDs simultaneously.
+**Situation:** In my home lab Splunk dashboard, I've written detection rules covering
+several Windows Event IDs.
 
 **Task:** If multiple alerts fired at once, I would need to triage them quickly
 without missing the most critical one.
@@ -43,7 +43,7 @@ fire for the same host within minutes, that correlation elevates priority even i
 each alert is individually medium severity.
 
 **Result:** I document this prioritisation logic in my detection rule response
-actions — each rule has a numbered escalation decision tree that a Tier 1 analyst
+actions — the rules I've written have numbered escalation decision trees that a Tier 1 analyst
 can follow at 3am without needing to think it through from scratch.
 
 ---
@@ -103,10 +103,8 @@ penetration testing, development, and blue team SOC work.
 appealed to me because it combines real-time problem solving (investigating live
 alerts), analytical thinking (correlating evidence across multiple log sources),
 and direct impact (you are protecting real organisations and real people). I also
-found the UK job market for blue team roles to be strong — the NCSC reports a
-consistent skills gap in defensive security roles.
+found the UK job market for blue team roles to be strong — government labour-market research reports skills gaps across cyber security.
 
 **Result:** I committed to blue team and built a structured 3-month programme
-covering detection engineering, DFIR, and the certifications UK employers look
-for. The home lab gives me demonstrable
+covering detection engineering, DFIR, and incident response. The home lab gives me demonstrable
 practical experience. The GitHub portfolio shows the work publicly.

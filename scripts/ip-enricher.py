@@ -10,7 +10,7 @@ import requests
 import os
 import sys
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 
 VT_KEY = os.environ.get("VT_KEY", "")
 ABUSE_KEY = os.environ.get("ABUSE_KEY", "")
@@ -88,7 +88,7 @@ th,td{{border:1px solid #e2e8f0;padding:10px;text-align:left}}th{{background:#f8
 .verdict{{font-size:1.4em;font-weight:bold;color:{colour.get(verdict,"#64748b")};padding:10px;border:2px solid currentColor;display:inline-block;margin:10px 0}}</style>
 </head><body>
 <h1>IP Triage Report: {ip}</h1>
-<p>Generated: {datetime.now().strftime("%Y-%m-%d %H:%M:%S UTC")}</p>
+<p>Generated: {datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")}</p>
 <div class="verdict">{verdict}</div>
 <h2>VirusTotal</h2>
 <table><tr><th>Malicious</th><th>Suspicious</th><th>Clean</th></tr>

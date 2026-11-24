@@ -1,0 +1,15 @@
+# Secrets
+.env
+*.key
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Local outputs
+*-triage.html
+detection-rules/auto-converted/*.tmp
+
+# Raw datasets (large, redistributed by their authors)
+**/data/raw/
