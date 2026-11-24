@@ -1,5 +1,6 @@
 # CTF #01 — CyberDefenders PacketMaze
 
+**Status:** Draft. Findings, detections, and the ticket are not yet completed.
 **Platform:** CyberDefenders
 **Difficulty:** Easy
 **Date:** Jun 2026

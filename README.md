@@ -2,8 +2,8 @@
 
 **Tadiwanashe Kusema** | BSc Cyber Security, University of Derby | Aspiring Blue Team Analyst
 
-3-month intensive blue team programme building a minimum viable portfolio for UK SOC analyst roles.
-Security+ ✓ | BTL1 (Month 2) | SC-200 (Month 3)
+Hands-on blue team practice for UK SOC analyst roles: detection engineering, DFIR, and incident response, built in a home lab.
+No certifications held yet.
 
 ---
 
@@ -51,20 +51,10 @@ blue-team-journey/
 
 ---
 
-## 📜 Certifications
+## 📊 Plan and Progress
 
-| Cert | Status | Date |
-|------|--------|------|
-| CompTIA Security+ SY0-701 | 🎯 Target | Jun 2026 |
-| BTL1 Blue Team Level 1 | 🎯 Target | Jul 2026 |
-| SC-200 Microsoft Security Operations | 🎯 Target | Aug 2026 |
-
----
-
-## 📊 Progress Log
-
-| Month | Focus | Key Output |
+| Month | Focus | Output |
 |-------|-------|-----------|
-| Month 1 | Foundations + Security+ | Lab running, 10+ detection rules, 3 CTF writeups |
-| Month 2 | BTL1 prep + DFIR depth | 6 CTF writeups, forensic reports, BTL1 exam |
-| Month 3 | SC-200 + job hunt sprint | Capstone project, active interviews |
+| Month 1 | Lab build and detection rules | Lab running; first detection rules and one CTF writeup in progress |
+| Month 2 | DFIR depth | Further CTF writeups and forensic reports (planned) |
+| Month 3 | Capstone project and job search | Capstone project (planned) |

@@ -15,3 +15,5 @@ Each rule includes: ATT&CK technique, false positive notes, and response actions
 | 06 | Pass-the-Hash — NTLM Network Logon | 4624 | T1550.002 | Critical |
 | 07 | Suspicious PowerShell Execution | 1 (Sysmon) | T1059.001 | High |
 | 08 | LSASS Memory Access | 10 (Sysmon) | T1003.001 | Critical |
+
+**Status:** Rule 01 is in this folder. Rule 05 is in `/sigma-rules`. The other rules are planned and not yet in the repo.

@@ -20,7 +20,7 @@ my Python enrichment script. I checked whether the target account was privileged
 
 **Result:** In my test case, I detected that 6 failed logons for the jsmith account
 were followed by a successful logon from the same IP — indicating brute force success.
-I escalated this as a True Positive and documented it in a Jira-format mock incident
+In the lab I classified this as a True Positive and documented it in a Jira-format mock incident
 ticket with the ATT&CK technique (T1110.001) and immediate response actions.
 
 ---
@@ -74,20 +74,20 @@ understand detections and suggests investigation steps.
 ## Q4: "Tell me about a time you learned something new quickly."
 
 **Situation:** I built a dual-SIEM home lab from scratch over 3 months while studying
-for certifications.
+cyber security.
 
 **Task:** I had to learn Splunk SPL and Microsoft Sentinel KQL simultaneously —
 two different query languages with different syntax but similar logical structure.
 
 **Action:** I wrote the same detection for each Windows Event ID in both languages
-side by side in a GitHub document (detection-rules/spl-vs-kql-comparison.md).
+side by side in a GitHub document.
 By always writing the KQL equivalent immediately after the SPL query, I learned
 to translate between them rather than learning each in isolation. I also set up
 a GitHub Actions CI/CD pipeline that auto-converts my Sigma rules to both SPL
 and KQL, which gave me immediate feedback when my syntax was wrong.
 
 **Result:** After two weeks I was comfortable writing detections in both languages.
-By the end of Month 1 I had 10+ detection rules in both SPL and KQL, each with
+By the end of the first month I had written detection rules in both SPL and KQL, each with
 ATT&CK technique IDs, false positive notes, and response actions.
 
 ---
@@ -108,5 +108,5 @@ consistent skills gap in defensive security roles.
 
 **Result:** I committed to blue team and built a structured 3-month programme
 covering detection engineering, DFIR, and the certifications UK employers look
-for. Security+ and BTL1 give me credentials. The home lab gives me demonstrable
+for. The home lab gives me demonstrable
 practical experience. The GitHub portfolio shows the work publicly.
