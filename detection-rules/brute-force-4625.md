@@ -11,6 +11,8 @@
 
 **Trigger:** 5 or more failed logon attempts for the same account within a 10-minute window.
 
+> Note: both queries count in fixed 10-minute buckets, not a sliding window. A burst that straddles a bucket boundary can be split and missed. A sliding-window version is a planned improvement.
+
 ### Splunk SPL
 
 ```spl

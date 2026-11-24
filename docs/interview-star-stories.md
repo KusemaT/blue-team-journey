@@ -20,15 +20,15 @@ my Python enrichment script. I checked whether the target account was privileged
 
 **Result:** In my test case, I detected that 6 failed logons for the jsmith account
 were followed by a successful logon from the same IP — indicating brute force success.
-I escalated this as a True Positive and documented it in a Jira-format mock incident
-ticket with the ATT&CK technique (T1110.001) and immediate response actions.
+In the lab I classified this as a True Positive and documented it in a mock incident
+ticket with the ATT&CK technique (T1110) and immediate response actions.
 
 ---
 
 ## Q2: "How do you prioritise multiple alerts firing simultaneously?"
 
-**Situation:** In my home lab Splunk dashboard, I monitor detection rules covering
-8 different Windows Event IDs simultaneously.
+**Situation:** In my home lab Splunk dashboard, I've written detection rules covering
+several Windows Event IDs.
 
 **Task:** If multiple alerts fired at once, I would need to triage them quickly
 without missing the most critical one.
@@ -43,7 +43,7 @@ fire for the same host within minutes, that correlation elevates priority even i
 each alert is individually medium severity.
 
 **Result:** I document this prioritisation logic in my detection rule response
-actions — each rule has a numbered escalation decision tree that a Tier 1 analyst
+actions — the rules I've written have numbered escalation decision trees that a Tier 1 analyst
 can follow at 3am without needing to think it through from scratch.
 
 ---
@@ -74,20 +74,20 @@ understand detections and suggests investigation steps.
 ## Q4: "Tell me about a time you learned something new quickly."
 
 **Situation:** I built a dual-SIEM home lab from scratch over 3 months while studying
-for certifications.
+cyber security.
 
 **Task:** I had to learn Splunk SPL and Microsoft Sentinel KQL simultaneously —
 two different query languages with different syntax but similar logical structure.
 
 **Action:** I wrote the same detection for each Windows Event ID in both languages
-side by side in a GitHub document (detection-rules/spl-vs-kql-comparison.md).
+side by side in a GitHub document.
 By always writing the KQL equivalent immediately after the SPL query, I learned
 to translate between them rather than learning each in isolation. I also set up
 a GitHub Actions CI/CD pipeline that auto-converts my Sigma rules to both SPL
 and KQL, which gave me immediate feedback when my syntax was wrong.
 
 **Result:** After two weeks I was comfortable writing detections in both languages.
-By the end of Month 1 I had 10+ detection rules in both SPL and KQL, each with
+By the end of the first month I had written detection rules in both SPL and KQL, each with
 ATT&CK technique IDs, false positive notes, and response actions.
 
 ---
@@ -103,10 +103,8 @@ penetration testing, development, and blue team SOC work.
 appealed to me because it combines real-time problem solving (investigating live
 alerts), analytical thinking (correlating evidence across multiple log sources),
 and direct impact (you are protecting real organisations and real people). I also
-found the UK job market for blue team roles to be strong — the NCSC reports a
-consistent skills gap in defensive security roles.
+found the UK job market for blue team roles to be strong — government labour-market research reports skills gaps across cyber security.
 
 **Result:** I committed to blue team and built a structured 3-month programme
-covering detection engineering, DFIR, and the certifications UK employers look
-for. Security+ and BTL1 give me credentials. The home lab gives me demonstrable
+covering detection engineering, DFIR, and incident response. The home lab gives me demonstrable
 practical experience. The GitHub portfolio shows the work publicly.

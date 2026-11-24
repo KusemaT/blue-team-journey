@@ -1,5 +1,6 @@
 # Incident Ticket — Phishing Investigation (ServiceNow Format)
 
+> Template: replace each [bracketed] placeholder with lab data before publishing, or label the file as a template.
 **Incident Number:** INC0000001
 **Category:** Security
 **Subcategory:** Phishing
